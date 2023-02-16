@@ -15,15 +15,21 @@ namespace SimonSays
     public partial class Form1 : Form
     {
         //TODO: create a List to store the pattern. Must be accessable on other screens
+        public static int numberPlays = 0;
 
         public Form1()
         {
             InitializeComponent();
-        }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            //TODO: Launch MenuScreen
+            //creates an instance of the MenuScreen
+            MenuScreen ms = new MenuScreen();
+
+            // Centre the screen on the Form  
+            ms.Location = new Point((this.ClientSize.Width - ms.Width) / 2, (this.ClientSize.Height - ms.Height) / 2);
+
+            //Add and give focus
+            this.Controls.Add(ms);
+            ms.Focus();
         }
     }
 }
