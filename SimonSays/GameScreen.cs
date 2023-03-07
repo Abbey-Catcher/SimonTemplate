@@ -15,7 +15,8 @@ namespace SimonSays
     public partial class GameScreen : UserControl
     {
         //TODO: create an int guess variable to track what part of the pattern the user is at
-
+        List<GameScreen> pattern = new List<GameScreen>();
+        Random patternGen = new Random();
 
         public GameScreen()
         {
@@ -25,14 +26,26 @@ namespace SimonSays
         private void GameScreen_Load(object sender, EventArgs e)
         {
             //TODO: clear the pattern list from form1
+            pattern.Clear();
+
             //TODO: refresh
+            Refresh();
+
             //TODO: pause for a bit
+
+
             //TODO: run ComputerTurn()
+            ComputerTurn();
         }
 
         private void ComputerTurn()
         {
             //TODO: get rand num between 0 and 4 (0, 1, 2, 3) and add to pattern list. Each number represents a button. For example, 0 may be green, 1 may be blue, etc.
+            patternGen.Next(0, 4);
+            //0 = green
+            //1 = red
+            //2 = yellow
+            //3 = blue
 
             //TODO: create a for loop that shows each value in the pattern by lighting up approriate button
 
