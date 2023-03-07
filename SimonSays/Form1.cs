@@ -16,6 +16,7 @@ namespace SimonSays
     {
         //TODO: create a List to store the pattern. Must be accessable on other screens
         public static int numberPlays = 0;
+        //List<GameScreen> pattern = new List<GameScreen>();
 
         public Form1()
         {

@@ -41,7 +41,8 @@ namespace SimonSays
         private void ComputerTurn()
         {
             //TODO: get rand num between 0 and 4 (0, 1, 2, 3) and add to pattern list. Each number represents a button. For example, 0 may be green, 1 may be blue, etc.
-            patternGen.Next(0, 4);
+            //GameScreen pattern = new GameScreen(patternGen.Next(0, 4));
+            pattern.Add();
             //0 = green
             //1 = red
             //2 = yellow
